@@ -39,6 +39,10 @@ function renderModuleMenu() {
         text.textContent = "Какой-то текст в модальном окне"
         moduleMenu.appendChild(text)
 
+        text.addEventListener('click', (event) => {
+            event.stopPropagation();
+        })
+
     } else {
         const moduleMenu = document.querySelector('.ModuleMenu');
         moduleMenu.remove();
